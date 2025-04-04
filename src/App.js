@@ -1,88 +1,65 @@
 import React from "react";
 
-function Button({ children, className = "" }) {
-  return <button className={`bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 ${className}`}>{children}</button>;
-}
-
-function Card({ children }) {
-  return <div className="bg-white rounded-xl shadow-md">{children}</div>;
-}
-
-function CardContent({ children, className = "" }) {
-  return <div className={`p-4 ${className}`}>{children}</div>;
-}
-
 export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-gray-100 p-6">
-      <div className="max-w-5xl mx-auto">
-        <header className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold">🎫 TicketMarket</h1>
-          <nav className="space-x-4 text-gray-700">
-            <a href="#buy" className="hover:underline">Buy</a>
-            <a href="#sell" className="hover:underline">Sell</a>
-            <a href="#contact" className="hover:underline">Contact</a>
-          </nav>
-        </header>
+    <div>
+      <header style={{ padding: "1rem", backgroundColor: "#ffffff", boxShadow: "0 2px 6px rgba(0,0,0,0.05)", textAlign: "center" }}>
+        <h1 style={{ fontSize: "2rem" }}>🎫 TicketMarket</h1>
+        <nav style={{ marginTop: "0.5rem" }}>
+          <a href="#buy">Buy</a>
+          <a href="#sell">Sell</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-        <section className="text-center mb-10">
-          <h2 className="text-4xl font-bold mb-4">Securely Buy & Sell Tickets to Any Event</h2>
-          <p className="text-lg text-gray-600">
-            Join a trusted platform where fans connect to exchange tickets safely, quickly, and confidently.
-          </p>
+      <main className="container">
+        <section style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <h2 style={{ fontSize: "1.8rem" }}>Securely Buy & Sell Tickets to Any Event</h2>
+          <p>Join a trusted platform where fans connect to exchange tickets safely, quickly, and confidently.</p>
         </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-          <Card id="buy">
-            <CardContent>
-              <h3 className="text-2xl font-semibold mb-4">🎟️ For Buyers</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>Browse tickets to concerts, sports, and more</li>
-                <li>Verified sellers and guaranteed access</li>
-                <li>Exclusive early access deals and price alerts</li>
-              </ul>
-              <Button className="mt-6 w-full">Browse Tickets</Button>
-            </CardContent>
-          </Card>
+        <div className="grid">
+          <div className="card" id="buy">
+            <h3>🎟️ For Buyers</h3>
+            <ul>
+              <li>Browse tickets to concerts, sports, and more</li>
+              <li>Verified sellers and guaranteed access</li>
+              <li>Exclusive early access deals and price alerts</li>
+            </ul>
+            <button className="button">Browse Tickets</button>
+          </div>
 
-          <Card id="sell">
-            <CardContent>
-              <h3 className="text-2xl font-semibold mb-4">💸 For Sellers</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>List your tickets and reach verified buyers</li>
-                <li>Low fees and fast payouts</li>
-                <li>Support for mobile, PDF, and paper formats</li>
-              </ul>
-              <Button className="mt-6 w-full">Sell Your Tickets</Button>
-            </CardContent>
-          </Card>
+          <div className="card" id="sell">
+            <h3>💸 For Sellers</h3>
+            <ul>
+              <li>List your tickets and reach verified buyers</li>
+              <li>Low fees and fast payouts</li>
+              <li>Support for mobile, PDF, and paper formats</li>
+            </ul>
+            <button className="button">Sell Your Tickets</button>
+          </div>
         </div>
 
-        <Card className="mb-10">
-          <CardContent className="text-center">
-            <h3 className="text-2xl font-semibold mb-3">🔒 Why Trust Us</h3>
-            <p className="text-gray-600 mb-4">We’re committed to making ticket exchange easy and safe for everyone.</p>
-            <ul className="list-disc list-inside text-gray-700 space-y-2 max-w-md mx-auto text-left">
-              <li>✅ Verified users and fraud protection</li>
-              <li>🔐 Secure checkout with payment protection</li>
-              <li>📞 24/7 customer support</li>
-              <li>🌍 Thousands of happy buyers and sellers worldwide</li>
-            </ul>
-          </CardContent>
-        </Card>
+        <div className="card">
+          <h3>🔒 Why Trust Us</h3>
+          <ul>
+            <li>✅ Verified users and fraud protection</li>
+            <li>🔐 Secure checkout with payment protection</li>
+            <li>📞 24/7 customer support</li>
+            <li>🌍 Thousands of happy buyers and sellers worldwide</li>
+          </ul>
+        </div>
 
-        <Card id="contact">
-          <CardContent className="text-center">
-            <h3 className="text-2xl font-semibold mb-2">📞 Get Support or Ask a Question</h3>
-            <p className="mb-4 text-gray-600">Our team is here to help. Contact us any time for quick assistance.</p>
-            <Button className="w-full">Contact Us</Button>
-          </CardContent>
-        </Card>
+        <div className="card" id="contact" style={{ textAlign: 'center' }}>
+          <h3>📞 Get Support or Ask a Question</h3>
+          <p>Our team is here to help. Contact us any time for quick assistance.</p>
+          <button className="button">Contact Us</button>
+        </div>
+      </main>
 
-        <footer className="text-center text-gray-500 text-sm mt-10">
-          © 2025 TicketMarket. All rights reserved. | Terms | Privacy
-        </footer>
-      </div>
+      <footer style={{ textAlign: "center", padding: "1rem", fontSize: "0.9rem", color: "#6b7280" }}>
+        © 2025 TicketMarket. All rights reserved. | Terms | Privacy
+      </footer>
     </div>
   );
 }
