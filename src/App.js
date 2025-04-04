@@ -1,5 +1,4 @@
 import React from "react";
-import { ShieldCheck, Users, Ticket } from "lucide-react";
 
 function Button({ children, className = "" }) {
   return <button className={`bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 ${className}`}>{children}</button>;
@@ -13,7 +12,7 @@ function CardContent({ children, className = "" }) {
   return <div className={`p-4 ${className}`}>{children}</div>;
 }
 
-export default function TicketMarketplace() {
+export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-gray-100 p-6">
       <div className="max-w-5xl mx-auto">
@@ -35,8 +34,8 @@ export default function TicketMarketplace() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
           <Card id="buy">
-            <CardContent className="p-6">
-              <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2"><Ticket size={20}/> For Buyers</h3>
+            <CardContent>
+              <h3 className="text-2xl font-semibold mb-4">🎟️ For Buyers</h3>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
                 <li>Browse tickets to concerts, sports, and more</li>
                 <li>Verified sellers and guaranteed access</li>
@@ -47,8 +46,8 @@ export default function TicketMarketplace() {
           </Card>
 
           <Card id="sell">
-            <CardContent className="p-6">
-              <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2"><Users size={20}/> For Sellers</h3>
+            <CardContent>
+              <h3 className="text-2xl font-semibold mb-4">💸 For Sellers</h3>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
                 <li>List your tickets and reach verified buyers</li>
                 <li>Low fees and fast payouts</li>
@@ -60,10 +59,8 @@ export default function TicketMarketplace() {
         </div>
 
         <Card className="mb-10">
-          <CardContent className="p-6 text-center">
-            <h3 className="text-2xl font-semibold mb-3 flex justify-center items-center gap-2">
-              <ShieldCheck size={20}/> Why Trust Us
-            </h3>
+          <CardContent className="text-center">
+            <h3 className="text-2xl font-semibold mb-3">🔒 Why Trust Us</h3>
             <p className="text-gray-600 mb-4">We’re committed to making ticket exchange easy and safe for everyone.</p>
             <ul className="list-disc list-inside text-gray-700 space-y-2 max-w-md mx-auto text-left">
               <li>✅ Verified users and fraud protection</li>
@@ -75,7 +72,7 @@ export default function TicketMarketplace() {
         </Card>
 
         <Card id="contact">
-          <CardContent className="p-6 text-center">
+          <CardContent className="text-center">
             <h3 className="text-2xl font-semibold mb-2">📞 Get Support or Ask a Question</h3>
             <p className="mb-4 text-gray-600">Our team is here to help. Contact us any time for quick assistance.</p>
             <Button className="w-full">Contact Us</Button>
