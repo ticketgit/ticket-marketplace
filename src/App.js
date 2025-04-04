@@ -26,7 +26,7 @@ export default function App() {
               <li>Verified sellers and guaranteed access</li>
               <li>Exclusive early access deals and price alerts</li>
             </ul>
-            <button className="button">Browse Tickets</button>
+            <a href="mailto:contact@npxdeals.com"><button className="button">Browse Tickets</button></a>
           </div>
 
           <div className="card" id="sell">
@@ -36,7 +36,7 @@ export default function App() {
               <li>Low fees and fast payouts</li>
               <li>Support for mobile, PDF, and paper formats</li>
             </ul>
-            <button className="button">Sell Your Tickets</button>
+            <a href="mailto:contact@npxdeals.com"><button className="button">Sell Your Tickets</button></a>
           </div>
         </div>
 
@@ -53,7 +53,7 @@ export default function App() {
         <div className="card" id="contact" style={{ textAlign: 'center' }}>
           <h3>📞 Get Support or Ask a Question</h3>
           <p>Our team is here to help. Contact us any time for quick assistance.</p>
-          <button className="button">Contact Us</button>
+          <a href="mailto:contact@npxdeals.com"><button className="button">Contact Us</button></a>
         </div>
       </main>
 
