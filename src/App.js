@@ -4,7 +4,7 @@ export default function App() {
   return (
     <div>
       <header style={{ padding: "1rem", backgroundColor: "#ffffff", boxShadow: "0 2px 6px rgba(0,0,0,0.05)", textAlign: "center" }}>
-        <h1 style={{ fontSize: "2rem" }}>🎫 TicketMarket</h1>
+        <h1 style={{ fontSize: "2rem" }}>🎫 NPX Deals - Buy/Sell Event Tickets</h1>
         <nav style={{ marginTop: "0.5rem" }}>
           <a href="#buy">Buy</a>
           <a href="#sell">Sell</a>
